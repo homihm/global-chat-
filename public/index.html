@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="auth">
+    <h2>Login / Register</h2>
+    <input id="username" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+    <button onclick="register()">Register</button>
+    <button onclick="login()">Login</button>
+</div>
+
+<div id="app" style="display:none;">
+    <div id="sidebar"></div>
+
+    <div id="chat">
+        <div class="tabs">
+            <button onclick="showChat()">Chat</button>
+            <button onclick="showInfo()">Info</button>
+        </div>
+
+        <div id="messages"></div>
+        <div id="info" style="display:none;"></div>
+
+        <div class="input">
+            <input id="input" placeholder="Message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
